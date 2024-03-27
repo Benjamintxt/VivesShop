@@ -8,7 +8,7 @@ namespace VivesShop.Ui.Mvc.Models
         [DisplayName("Product name")]
         public required string Name { get; set; }
         [DisplayName("Price")]
-        public required float Price { get; set; }
+        public required decimal Price { get; set; }
 
     }
 
