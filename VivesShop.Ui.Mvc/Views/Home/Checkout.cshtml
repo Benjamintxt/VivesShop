@@ -1,0 +1,42 @@
+﻿@model IList<CartProduct>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h1 class ="text-center">Shopping cart</h1>
+            @foreach (var cartProduct in Model)
+            {
+                <partial name="PartialRowCheckoutProduct" model="cartProduct" />
+            }
+            <h1 class ="text-center">Total: € @Model.Sum(cp => cp.Price).ToString()</h1>
+            <h3 class="text-center pt-1">Select your payment method :</h3>
+            <div class="d-flex justify-content-between">
+                <div>
+                    <a asp-controller="Home" asp-action="SuccessfulPayment">
+                        <img src="~/images/AM.png" width="70" />
+                    </a>
+                </div>
+                <div>
+                    <a asp-controller="Home" asp-action="SuccessfulPayment">
+                        <img src="~/images/ApplePay.png" width="70" />
+                    </a>
+                </div>
+                <div>
+                    <a asp-controller="Home" asp-action="SuccessfulPayment">
+                        <img src="~/images/Mastercard.png" width="70" />
+                    </a>
+                </div>
+                <div>
+                    <a asp-controller="Home" asp-action="SuccessfulPayment">
+                        <img src="~/images/Paypal.png" width="70" />
+                    </a>
+                </div>
+                <div>
+                    <a asp-controller="Home" asp-action="SuccessfulPayment">
+                        <img src="~/images/Visa.png" width="70" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

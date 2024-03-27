@@ -1,0 +1,25 @@
+﻿@model IList<Product>
+@{
+    ViewBag.Title = "Manage ShopItem shop page";
+}
+
+<div class="container mt-5">
+    <h2>@ViewBag.Title</h2>
+    
+    <a asp-action="Create" class="btn btn-primary">New Product</a>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var product in Model)
+        {
+                <partial name="PartialRowProduct" model="product" />
+        }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,7 @@
+﻿@model Product
+
+<form asp-action="Create" asp-controller="Cart" method="post">
+    <input type="hidden" name="productId" value="@Model.Id" />
+    <button type="submit" class="btn btn-light"> @Model.Name  ( @Model.Price €) + </button>
+</form>
+

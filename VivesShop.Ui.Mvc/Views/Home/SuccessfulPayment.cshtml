@@ -1,0 +1,9 @@
+﻿@model IList<CartProduct>
+
+<div class="container d-flex justify-content-center align-items-center">
+    <div>
+        <h1>Payment Successful !!!</h1>
+        <h2>Total: € @Model.Sum(cp => cp.Price).ToString()</h2>
+
+    </div>
+</div>

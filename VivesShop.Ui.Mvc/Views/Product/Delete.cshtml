@@ -1,0 +1,14 @@
+﻿@model Product
+@{
+    ViewBag.Title = "Edit Product";
+}
+
+<h1>@ViewBag.Title</h1>
+
+<form method="post">
+
+    <p>Are you sure you want to delete @Model.Name @Model.Price ?</p>
+
+    <a asp-action="Index" class="btn btn-primary">No</a>
+    <button type="submit" class="btn btn-danger">Yes</button>
+</form>
